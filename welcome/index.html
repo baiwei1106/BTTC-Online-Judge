@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>BTTCACM</title>
+	<meta charset="utf-8">
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+</head>
+
+<body>
+	<div class="banner">
+		<div class="banner-text">
+			<h2></h2>
+			<!-- banner Slider starts Here -->
+			<script src="js/responsiveslides.min.js"></script>
+			<script>
+				$(function() {
+					$("#slider3").responsiveSlides({
+						auto: false,
+						pager: true,
+						nav: true,
+						speed: 500,
+						namespace: "callbacks",
+						before: function() {
+							$('.events').append("<li>before event fired.</li>");
+						},
+						after: function() {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+				});
+			</script>
+			<div id="top" class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>
+						<h3>Welcome BTTC Online Judge</h3>
+						<p>新版OJ已经上线试运行，欢迎体验，如果在使用中有任何问题，请及时反馈，谢谢！</p>
+						<a href="https://www.bttcacm.cn/" class="more btn-1b scroll"  target="_blank">新版入口</a>
+						<a href="https://oj.bttcacm.cn/" class="more btn-1b scroll"  target="_blank">旧版入口</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
